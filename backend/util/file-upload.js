@@ -26,11 +26,10 @@ exports.fileUpload = async (req, res) => {
     if (!req.file) {
         return res.status(400).json({ message: 'No file uploaded' });
     }
-
     try {
-        // File was successfully uploaded and saved locally
         return res.status(200).json({ message: 'File uploaded successfully', filePath: req.file.path });
-    } catch (err) {
+    } 
+    catch (err) {
         // Handle any errors that occur during the upload
         return res.status(500).json({ message: 'Failed to upload file' });
     }
