@@ -72,21 +72,21 @@ export const SignupForm = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name">Name</label>
-                  <input class="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm file:text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50" id="name" name="name" placeholder="Name" type="text" required onChange={changeHandler} value={formData.name}/>
+                  <input className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm file:text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50" id="name" name="name" placeholder="Name" type="text" required onChange={changeHandler} value={formData.name}/>
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email">Email</label>
-                  <input class="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm file:text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50" id="email" name="email" placeholder="Email" type="email" required onChange={changeHandler} value={formData.email}/>
+                  <input className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm file:text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50" id="email" name="email" placeholder="Email" type="email" required onChange={changeHandler} value={formData.email}/>
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="phone">Phone</label>
-                  <input class="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm file:text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50" id="phone" name="phone" placeholder="Phone" type="tel" required onChange={changeHandler} value={formData.phone}/>
+                  <input className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm file:text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50" id="phone" name="phone" placeholder="Phone" type="tel" required onChange={changeHandler} value={formData.phone}/>
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="location">Location</label>
-                  <input class="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm file:text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50" id="location" name="location" placeholder="Location" type="text" required onChange={changeHandler} value={formData.location}/>
+                  <input className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm file:text-sm focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50" id="location" name="location" placeholder="Location" type="text" required onChange={changeHandler} value={formData.location}/>
                 </div>
               </div>
               <div className="space-y-2">
