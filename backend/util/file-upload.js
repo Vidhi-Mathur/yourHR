@@ -4,7 +4,7 @@ const multer = require('multer');
 // Handling file storage with multer
 const fileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'uploads/resume');
+        cb(null, 'uploads/resume/');
     },
     filename: (req, file, cb) => {
         const fileExtension = file.mimetype.split('/')[1];
