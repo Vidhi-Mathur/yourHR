@@ -55,10 +55,11 @@ export const SignupForm = () => {
                     },
                     body: JSON.stringify(candidateData)
                 })
+                const result = await response.json()
                 if (!response.ok) {
                     const errorData = await response.json()
                     if (errorData.errors && Array.isArray(errorData.errors)) errors = errorData.errors.map(error => error.msg)
-                    else errors.push('Failed saving candidate data')
+                    else errors.push(`${result.message} || Failed saving candidate data`)
                 }
                 setAlert({ messages: ['Candidate data saved successfully'], type: 'Success' })
             } 
