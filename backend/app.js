@@ -7,10 +7,15 @@ const { fileUpload, upload } = require('./util/file-upload');
 
 const app = express();
 
-app.use(cors({
-    origin: '*'
-}));
-
+const corsOptions = {
+    origin: 'https://your-hr-seven.vercel.app',
+    optionsSuccessStatus: 200
+  }
+  
+app.options('*', cors());
+  
+app.use(cors(corsOptions));
+  
 // Parsing JSON bodies
 app.use(express.json({ limit: '50mb' }));
 
