@@ -48,7 +48,7 @@ export const SignupForm = () => {
                 resume: resumePath
             }
             try {
-                const response = await fetch('https://yourhr-tc9o.onrender.com', {
+                const response = await fetch(`${process.env.REACT_APP_SERVER_URL}`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

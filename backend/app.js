@@ -8,7 +8,7 @@ const { fileUpload, upload } = require('./util/file-upload');
 const app = express();
 
 const corsOptions = {
-    origin: 'https://your-hr-seven.vercel.app',
+    origin: process.env.CLIENT_URL,
     optionsSuccessStatus: 200
   }
   
