@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 const cors = require('cors');
 const candidateRoutes = require('./routes/candidate-route');
 const { fileUpload, upload } = require('./util/file-upload');
@@ -12,6 +13,7 @@ const corsOptions = {
     optionsSuccessStatus: 200
   }
   
+//Cors
 app.options('*', cors());
   
 app.use(cors(corsOptions));
@@ -27,7 +29,7 @@ app.use('/', candidateRoutes);
 app.post('/upload-resume', upload.single('resume'), fileUpload);
 
 // Serving static files
-app.use('/uploads/resume', express.static('uploads/resume'));
+app.use('/uploads/resume', express.static(path.join(__dirname, 'uploads', 'resume')));
 
 // Error handling
 app.use((err, req, res, next) => {
