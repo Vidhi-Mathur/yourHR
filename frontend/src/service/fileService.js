@@ -1,6 +1,6 @@
 export const fileUploadHandler = async(formDataResume) => {
     try {
-        const response = await fetch('http://localhost:3000/upload-resume', {
+        const response = await fetch('https://yourhr-tc9o.onrender.com/upload-resume', {
             method: 'POST',
             body: formDataResume
         })
